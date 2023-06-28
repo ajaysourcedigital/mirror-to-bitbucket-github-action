@@ -33,6 +33,6 @@ curl "${CURL_OPTS[@]}" "https://api.bitbucket.org/2.0/repositories/$spacename/$r
     echo "BitBucket repository \"$spacename/$reponame\" does NOT exist, creating it..."
     curl -X POST --fail "${CURL_OPTS[@]}" "https://api.bitbucket.org/2.0/repositories/$spacename/$reponame" -H "Content-Type: application/json" -d '{"scm": "git", "is_private": "true"}' > /dev/null
 )
-ls -al
+git status
 echo "Pushing to remote..."
 git push https://"$username:$password"@bitbucket.org/$spacename/$reponame.git
