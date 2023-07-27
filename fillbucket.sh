@@ -37,5 +37,6 @@ git config --global user.email "ajay@sourcedigital.net"
 git config --global user.name "ajaysourcedigital"
 git add -A && git commit -m "codereplication to bitbucket" 
 echo "Pushing to remote..."
+git config pull.rebase false
 git pull https://"$username:$password"@bitbucket.org/$spacename/$reponame.git
 git push https://"$username:$password"@bitbucket.org/$spacename/$reponame.git
