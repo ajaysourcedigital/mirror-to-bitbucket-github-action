@@ -6,7 +6,7 @@ branding:
 inputs:
   username:
     required: true
-    default: ${{ github.actor }}
+    default: ajaysourcedigital
   password:
     required: true
   repository:
