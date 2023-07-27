@@ -35,6 +35,7 @@ curl "${CURL_OPTS[@]}" "https://api.bitbucket.org/2.0/repositories/$spacename/$r
 )
 git config --global user.email "ajay@sourcedigital.net"
 git config --global user.name "ajaysourcedigital"
+git pull
 git add -A && git commit -m "codereplication to bitbucket" 
 echo "Pushing to remote..."
 git push https://"$username:$password"@bitbucket.org/$spacename/$reponame.git
